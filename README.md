@@ -4,7 +4,8 @@
 This workshop is a hands-on walk through of a three-tier web architecture in AWS. We will be manually creating the necessary network, security, app, and database components and configurations in order to run this architecture in an available and scalable manner.
 
 ## Artitecture Overview:
-![alt text](image.png)
+<img width="833" height="651" alt="project" src="https://github.com/user-attachments/assets/e9ec658b-c13f-4b82-bc4e-38a1ea7a2619" />
+
 
  In this architecture, a public-facing Application Load Balancer forwards client traffic to our web tier EC2 instances. The web tier is running Nginx webservers that are configured to serve a website and redirects our to the application tier's internal facing load balancer. The internal facing load balancer then forwards that traffic to the application tier, which is written in php. The application tier manipulates data in an RDS MySQL and returns it to our web tier. Load balancing, health checks and autoscaling groups are created at each layer to maintain the availability of this architecture.
 
